@@ -12,7 +12,7 @@
      $('.wrapper > .container > h1').html("Seja bem-vindo de volta!");
      $('form').fadeOut(500, function(){
          setTimeout(function(){
-            localStorage.setItem('token',"logado");
+            localStorage.setItem('token',"logadoteste");
             window.location.href = "index.html";
          },2000);
         

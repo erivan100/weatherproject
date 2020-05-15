@@ -9,7 +9,7 @@
     
 </head>
 <body>
-    <ul class="nav">
+    <ul class="nav navul">
         <li><img src="cloud.webp" alt="" width="50"></li>
         <li><a class="active" href=""><b>HOME</b></a></li>
         <li><a class="active" href=""><b>TESTE</b></a></li>
@@ -17,13 +17,38 @@
     </ul>
 
    
-    <form>
-		<fieldset>
-			<label>Estado</label>:<select id="estado" name="estado"></select> 
-			<label>Cidade</label>:<select id="cidade" name="cidade"></select> 
-		</fieldset>
-	</form>
+    <section class="top-banner">
+        <div class="container">
+            <button onclick="abrirmodal();" style="width: 300px; height: 100px;">MODAL</button>
+            <h1 class="heading text">Weather App</h1>
+            <form>
+                <input type="text" class="input" placeholder="Pesquisar Cidade" autofocus>
+                <button class="btn" type="submit">Buscar</button>
+                <span class="msg"></span>
+            </form>
+        </div>
+    </section>
+
+    <section class="ajax-section">
+        <div class="container">
+          <ul class="cities buscaul">
+            <li class="city" onclick="teste(teste);">
+                <h2 class="city-name" >
+                    <span>SP</span>
+                    <sup>SP</sup>
+                  </h2>
+                  <div class="city-temp">1231<sup>°C</sup></div>
+                  <figure>
+                    <img class="city-icon" >
+                    <figcaption>teste</figcaption>
+                  </figure>
+            </li>
+          </ul>
+        </div>
+      </section>
 
     <script src="app.js"></script>
+    <script src="busca.js"></script>
+  
 </body>
 </html>

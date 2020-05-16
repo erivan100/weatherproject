@@ -17,6 +17,49 @@ html{
     height: 100%;
 }
 
+/* ----- MODAL -----------------*/
+
+.modal-container {
+  width: 100vw;
+  height: 100vh;
+  color: red;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 2000;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: white;
+  width: 60%;
+  min-width: 300px;
+  padding: 40px;
+  border-radius: 30px;
+  position: relative;
+  
+}
+
+.fechar {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 50px;
+  height: 50px;
+  border-radius: 40px;
+  border: 4px solid white;
+  cursor: pointer;
+
+}
+
+.modal-container.mostrar {
+  display: flex;
+
+}
+/* ------------  FIM MODAL -----------------*/
+
 
 body{
     padding: 0;

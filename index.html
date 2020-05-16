@@ -15,22 +15,25 @@
         <li><a class="active" href=""><b>TESTE</b></a></li>
         <li class="exit" onclick="sair()"><a><b>SAIR</b></a></li>
     </ul>
-
+   
    
     <section class="top-banner">
         <div class="container">
-            <button onclick="abrirmodal();" style="width: 300px; height: 100px;">MODAL</button>
+          
+            
             <h1 class="heading text">Weather App</h1>
-            <form>
+              <form>
                 <input type="text" class="input" placeholder="Pesquisar Cidade" autofocus>
                 <button class="btn" type="submit">Buscar</button>
                 <span class="msg"></span>
-            </form>
+             </form>
         </div>
+
     </section>
 
     <section class="ajax-section">
         <div class="container">
+          <button class="logo" onclick="abrirmodal();" style="width: 300px; height: 100px;">MODAL</button>
           <ul class="cities buscaul">
             <li class="city" onclick="teste(teste);">
                 <h2 class="city-name" >
@@ -46,6 +49,14 @@
           </ul>
         </div>
       </section>
+
+     
+        <div id="modal-promocao" class="modal-container">
+          <div class="modal">
+            <button class="fechar">x</button>
+            <h3> ola</h3>
+            
+          </div>
 
     <script src="app.js"></script>
     <script src="busca.js"></script>

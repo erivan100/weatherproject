@@ -23,7 +23,7 @@ function iniciaModal(modalID, nomecidade) {
             if (xhr.readyState == 4) {
                 if (xhr.status = 200){
                 const modalInner = document.getElementsByClassName(modalID + "-html")[0];
-                modalInner.innerHTML += montarTabela(xhr.responseText);
+                modalInner.innerHTML = header + montarTabela(xhr.responseText);
                 modal.classList.add('mostrar');
                 //ao clicar fora e no X para sair do modal
                 modal.addEventListener('click', function (e) {
@@ -39,7 +39,13 @@ function iniciaModal(modalID, nomecidade) {
 
 }
 
-
+var header = `
+        <tr>
+        <th>Clima</th>
+        <th>Dia</th>
+        <th>Hora</th>
+        </tr>
+        `
 
 function montarTabela(listacidade) {
     let result = JSON.parse(listacidade);

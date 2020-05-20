@@ -66,7 +66,7 @@ form.addEventListener("submit", e => {
 
 
       const markup = `
-        <h2 class="city-name" id="city${idElement}" data-name="${name},${sys.country}">
+        <h2 class="city-name" id="city${idElement}" data-name="${name},${sys.country}" data-cityid="${sys.id}">
           <span>${name}</span>
           <sup>${sys.country}</sup>
         </h2>
@@ -91,9 +91,12 @@ form.addEventListener("submit", e => {
   input.focus();
 });
 
+
+
 const addEvent = (id, event = 'click') => {
     document.getElementById(id).addEventListener(event, function() {
         var plant = document.getElementById("city" + id);
-        alert(plant.getAttribute('data-name'));
+         /* alert(plant);  */
+         iniciaModal('modal-clima',plant.getAttribute('data-name'));
      });
   }

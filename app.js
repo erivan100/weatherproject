@@ -52,11 +52,17 @@ function montarTabela(listacidade) {
     console.log(result.data);
     let table = "";
     for (var i = 0; i < 10; i++) {
+
         let data = new Date(result.data[i].timestamp_local);
-        table += "<tr>" + "<td> "+ result.data[i].weather.description +"</td>" + "<td> "+ new Intl.DateTimeFormat('pt', { day: '2-digit' }).format(data) +"</td>" + "<td> "+ data +"</td>" +"</tr>"
+        table += "<tr>" + "<td> "+ result.data[i].weather.description +"</td>" + "<td> "+ new Intl.DateTimeFormat('pt', { weekday: 'long' }).format(data) +"</td>" + "<td> "+  new Intl.DateTimeFormat('pt', { hour: 'numeric', minute: 'numeric' }).format(data) +"</td>" +"</tr>"
     }
+    
+    
     console.log(table);
     return table;
+
+   
+ 
 
 }
 

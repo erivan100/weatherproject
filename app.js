@@ -22,6 +22,7 @@ function iniciaModal(modalID, nomecidade) {
         xhr.onreadystatechange = function () {
             if (xhr.readyState == 4) {
                 if (xhr.status = 200) {
+                    console.log(xhr.responseText);
                     const modalInner = document.getElementsByClassName(modalID + "-html")[0];
                     modalInner.innerHTML = header + montarTabela(xhr.responseText);
                     modal.classList.add('mostrar');
@@ -41,7 +42,8 @@ function iniciaModal(modalID, nomecidade) {
 
 var header = `
         <tr>
-        <th>Clima</th>
+        <th>Clima ( Grau Celsius )</th>
+        <th>Clima ( Descrição )</th>
         <th>Dia</th>
         <th>Hora</th>
         <th>Data</th>
@@ -55,7 +57,10 @@ function montarTabela(listacidade) {
     for (var i = 0; i < 10; i++) {
 
         let data = new Date(result.data[i].timestamp_local);
-        table += "<tr>" + "<td> " + result.data[i].weather.description + "</td>" +
+        table += 
+            "<tr>" +
+            "<td> " + result.data[i].temp + " °C" +  "</td>" +
+            "<td> " + result.data[i].weather.description + "</td>" +
             "<td> " + new Intl.DateTimeFormat('pt', { weekday: 'long' }).format(data) + "</td>" +
             "<td> " + new Intl.DateTimeFormat('pt', { hour: 'numeric', minute: 'numeric' }).format(data) + "</td>" +
             "<td> " + Intl.DateTimeFormat('pt').format(new Date) + "</td>"

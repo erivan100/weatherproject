@@ -1,61 +1,54 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather</title>
-    <script src="AuthGuard.js"></script>
-    <link rel="stylesheet" href="style.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather</title>
+  <script src="AuthGuard.js"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <ul class="nav navul">
-        <li><img src="cloud.webp" alt="" width="50"></li>
-        <li><a class="active" href=""><b>HOME</b></a></li>
-        <li><a class="active" href=""><b>TESTE</b></a></li>
-        <li class="exit" onclick="sair()"><a><b>SAIR</b></a></li>
-    </ul>
-   
-   
-    <section class="top-banner">
-        <div class="container">
-          
-            
-            <h1 class="heading text">Weather App</h1>
-              <form>
-                <input type="text" class="input" placeholder="Pesquisar Cidade" autofocus>
-                <button class="btn" type="submit">Buscar</button>
-                <span class="msg"></span>
-             </form>
-        </div>
+  <ul class="nav navul">
+    <li><img src="cloud.webp" alt="" width="50"></li>
+    <li><a class="active" href=""><b>HOME</b></a></li>
+    <li><a class="active" href=""><b>TESTE</b></a></li>
+    <li class="exit" onclick="sair()"><a><b>SAIR</b></a></li>
+  </ul>
 
-    </section>
 
-    <section class="ajax-section">
-        <div class="container">
-          
-          <ul class="cities buscaul">
-          </ul>
-        </div>
-      </section>
+  <section class="top-banner">
+    <div class="container">
+      <h1 class="heading text">Weather App</h1>
+      <form>
+        <input type="text" class="input" placeholder="Pesquisar Cidade" autofocus>
+        <button class="btn" type="submit">Buscar</button>
+        <span class="msg"></span>
+      </form>
+    </div>
 
-     
-        <div id="modal-clima" class="modal-container">
-          <div class="modal">
-            <button class="fechar">X</button>
-            
-              <table id="climatics" class="modal-clima-html">
-                
-                
-                
-               
-              </table>
-           
-            
-          </div>
+  </section>
+
+  <section class="ajax-section">
+    <div class="container">
+
+      <ul class="cities buscaul">
+      </ul>
+    </div>
+  </section>
+
+
+  <div id="modal-clima" class="modal-container">
+    <div class="modal">
+      <button class="fechar">X</button>
+      <table id="climatics" class="modal-clima-html"></table>
+    </div>
 
     <script src="app.js"></script>
     <script src="busca.js"></script>
-  
+  </div>
+
 </body>
+
 </html>
